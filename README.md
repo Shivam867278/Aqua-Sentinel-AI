@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aqua Sentinel AI
 
 Modern Streamlit dashboard UI for an AI-based Water Conservation and Monitoring System.
@@ -291,3 +292,7 @@ Error responses use:
   "timestamp": "UTC timestamp"
 }
 ```
+=======
+# Aqua-Sentinel-AI
+AI-based Water Monitoring System with modern UI, login, and billing features. It detects leakages, analyzes water quality, and predicts demand using ML. Includes backend APIs, testing modules, and real-time dashboard for efficient and scalable water management.
+>>>>>>> b4616a905d4f01b27a8e85a5fde6345d575c6e5f
