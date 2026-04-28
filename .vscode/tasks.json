@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install dependencies",
+      "type": "shell",
+      "command": "python -m pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Flask API",
+      "type": "shell",
+      "command": "python backend.py",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Streamlit Dashboard",
+      "type": "shell",
+      "command": "python -m streamlit run app.py",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run backend tests",
+      "type": "shell",
+      "command": "python -m pytest tests",
+      "problemMatcher": []
+    }
+  ]
+}

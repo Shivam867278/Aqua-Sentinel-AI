@@ -1,0 +1,9 @@
+streamlit>=1.34
+flask>=3.0
+flask-cors>=4.0
+pandas>=2.0
+requests>=2.31
+plotly>=5.20
+gunicorn>=21.2
+pytest>=8.0
+werkzeug>=3.0

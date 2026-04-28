@@ -1,0 +1,29 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      AQUA_ENV: production
+      AQUA_API_HOST: 0.0.0.0
+      AQUA_API_PORT: 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - aqua_data:/app/data
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    environment:
+      AQUA_ENV: production
+      AQUA_API_BASE_URL: http://api:5000
+      AQUA_DEVELOPER_NAME: Shivam
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
+volumes:
+  aqua_data:

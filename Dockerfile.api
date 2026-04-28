@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend.py config.py database.py response_utils.py validation.py ./
+
+ENV AQUA_API_HOST=0.0.0.0
+ENV AQUA_API_PORT=5000
+
+EXPOSE 5000
+
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "backend:app"]
